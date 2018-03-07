@@ -1,0 +1,6 @@
+compiler: ghcjs
+packages:
+  looking-glass-app-front-end/
+  looking-glass-app/
+  lib-looking-glass/
+

@@ -6,3 +6,23 @@
 'How do you know I'm mad?' said Alice.
 'You must be,' said the Cat, 'or you wouldn't have come here.'
 ```
+## lib-looking-glass
+This contains electron bindings and abstractions around them. As of now the plan is  
+to put code for both the main and render threads in this module. This is also where  
+the reflex system wrapping electron will be defined. Electron bindings may be pulled  
+out into a different library in the future.
+
+## looking-glass-app
+This is the main thread in the electron app.
+
+## looking-glass-front-end
+The application views.
+
+### problems
+  * The use of `threadDelay` is a dirty hack that will hopefully go away very soon.  
+  * Electron has a fairly large API surface. It seems impractical to wrap all of it by hand. It may be possible to generate code from the electron [json docs](inten://github.com/electron/electron/releases/tag/v1.8.2)
+
+### prior art
+  * [ghcjs-electron](https://github.com/taktoa/ghcjs-electron)  
+  * [hyper-haskell](https://github.com/HeinrichApfelmus/hyper-haskell)
+
